@@ -1,12 +1,20 @@
 {
-  "name": "react-atom",
-  "version": "1.0.0",
-  "private": false,
+  "name": "atoms-react",
+  "version": "1.0.1",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "homepage": "https://github.com/zhl0791/atoms-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhl0791/atoms-react.git"
+  },
   "description": "react-atom - A mini state management library for React",
   "keywords": [
     "recoil",
