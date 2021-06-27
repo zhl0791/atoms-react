@@ -1,0 +1,2 @@
+import{useState as t,useEffect as e}from"react";var r=function(t){var e={value:t,updaters:new Map,update:function(t){e.value!==t&&(e.value=t,e.updaters.forEach((function(t,e){return e((function(t){return!t}))})))}};return e},u=function(r){var u=t(!1)[1];return e((function(){return r.updaters.set(u,!0),function(){r.updaters.delete(u)}}),[r]),[r.value,r.update]};export{r as atom,u as useAtom};
+//# sourceMappingURL=index.js.map
