@@ -1,6 +1,6 @@
 # react-atom &middot; [![NPM Version](https://img.shields.io/npm/v/atoms-react)](https://www.npmjs.com/package/atoms-react) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zhl0791/atoms-react/blob/main/LICENSE)
 
-react-atom is A mini state management library for React.
+atoms-react is A mini state management library for React.
 
 Demo: [https://codesandbox.io/s/jovial-cookies-fdw2r](https://codesandbox.io/s/jovial-cookies-fdw2r)
 
@@ -8,7 +8,7 @@ Demo: [https://codesandbox.io/s/jovial-cookies-fdw2r](https://codesandbox.io/s/j
 
 ```tsx
 import React, { memo } from 'react';
-import { atom, useAtom } from 'react-atom';
+import { atom, useAtom } from 'atoms-react';
 
 const countAtom = atom(0);
 
@@ -45,15 +45,15 @@ export default memo(() => {
 ## Installation
 
 ```shell
-npm install react-atom
+npm install atoms-react
 ```
 
 Or if you're using [yarn](https://classic.yarnpkg.com/en/docs/install/):
 
 ```shell
-yarn add react-atom
+yarn add atoms-react
 ```
 
 ### License
 
-react-atom is [MIT licensed](./LICENSE).
+atoms-react is [MIT licensed](./LICENSE).
