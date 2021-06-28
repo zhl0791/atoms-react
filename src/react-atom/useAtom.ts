@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Atom } from './atom';
 
-export const useAtom = (atomInstance: any): [any, (value: any) => void] => {
+export const useAtom = <Value>(
+  atomInstance: Atom<Value>,
+): [Value, (value: Value) => void] => {
   const [, setState] = useState(false);
 
   useEffect(() => {

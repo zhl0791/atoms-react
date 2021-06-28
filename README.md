@@ -8,9 +8,17 @@ Demo: [https://codesandbox.io/s/jovial-cookies-fdw2r](https://codesandbox.io/s/j
 
 ```tsx
 import React, { memo } from 'react';
-import { atom, useAtom } from 'atoms-react';
+import { atom, useAtom, selectAtom } from 'atoms-react';
 
 const countAtom = atom(0);
+
+const baseAtom = atom({ text: 'text!!!', des: 'des!!!' });
+
+const sliceAtom = selectAtom(
+  baseAtom,
+  (value) => value.text,
+  (pre, next) => pre === next,
+);
 
 const Child = memo(() => {
   const [value, update] = useAtom(countAtom);
