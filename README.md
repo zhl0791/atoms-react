@@ -1,4 +1,4 @@
-# react-atom &middot; [![NPM Version](https://img.shields.io/npm/v/react-atom)](https://www.npmjs.com/package/react-atom) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebookexperimental/Recoil/blob/master/LICENSE)
+# react-atom &middot; [![NPM Version](https://img.shields.io/npm/v/atoms-react)](https://www.npmjs.com/package/atoms-react) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zhl0791/atoms-react/blob/main/LICENSE)
 
 react-atom is A mini state management library for React.
 
