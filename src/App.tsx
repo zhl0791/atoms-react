@@ -1,18 +1,18 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil';
-import InfiniteLoading from './InfiniteLoading';
-import RecoilTest from './RecoilTest';
 import './App.css';
-import UserAtom from './UserAtom';
+import TestAtom from './TestAtom';
+import { Provider } from './react-atom';
 
 function App() {
   return (
     <div className="App">
-      {/*<InfiniteLoading />*/}
-      <UserAtom />
-      {/*<RecoilRoot>*/}
-      {/*  <RecoilTest />*/}
-      {/*</RecoilRoot>*/}
+      <Provider>
+        <TestAtom />
+      </Provider>
+      <hr />
+      <Provider>
+        <TestAtom />
+      </Provider>
     </div>
   );
 }

@@ -4,6 +4,18 @@ atoms-react is A mini state management library for React.
 
 Demo: [https://codesandbox.io/s/jovial-cookies-fdw2r](https://codesandbox.io/s/jovial-cookies-fdw2r)
 
+## Installation
+
+```shell
+npm install atoms-react
+```
+
+Or if you're using [yarn](https://classic.yarnpkg.com/en/docs/install/):
+
+```shell
+yarn add atoms-react
+```
+
 ## Example
 
 ```tsx
@@ -50,16 +62,33 @@ export default memo(() => {
 });
 ```
 
-## Installation
+### for react library
 
-```shell
-npm install atoms-react
-```
+A `Provider` will be necessary if we need to hold different atom values for different component trees.
 
-Or if you're using [yarn](https://classic.yarnpkg.com/en/docs/install/):
+`Provider` commonly used with library. 
 
-```shell
-yarn add atoms-react
+```tsx
+import React from 'react';
+import { atom, useAtom, Provider } from 'atoms-react';
+
+const countAtom = atom(0);
+
+const DemoComponent = memo(() => {
+  const [value, setValue] = useAtom(countAtom);
+
+  return (
+    <>{value}</>
+  );
+});
+
+const Wrapper = (Component: typeof DemoComponent) => (props: any) => (
+  <Provider>
+    <Component {...props} />
+  </Provider>
+);
+
+export default Wrapper(DemoComponent);
 ```
 
 ### License

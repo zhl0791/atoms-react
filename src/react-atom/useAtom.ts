@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Atom } from './atom';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
+import { Atom, AtomCreator } from './atom';
+import { Context } from './Provider';
+
+const globalSymbol = Symbol('atoms-react');
 
 export const useAtom = <Value>(
-  atomInstance: Atom<Value>,
+  atomCreator: AtomCreator<Value>,
 ): [Value, (value: Value) => void] => {
   const [, setState] = useState(false);
+  const key = useContext(Context) || globalSymbol;
+  const atomInstance = useMemo(() => atomCreator(key), [key]);
 
   useEffect(() => {
     atomInstance.updaters.set(setState, true);

@@ -43,13 +43,12 @@ export default memo(() => {
     <div>
       <p>I'm Father: {value}</p>
       <button onClick={() => setValue(value + 1)}>Father: +1</button>
-
-      <p>des: {base.des}</p>
-      <button onClick={() => setBase({ ...base, des: Date.now().toString() })}>
-        update des
-      </button>
       <Child />
 
+      <p>des: {base.des}</p>
+      <button onClick={() => setBase({ ...base, text: Date.now().toString() })}>
+        update des
+      </button>
       <Child2 />
     </div>
   );
