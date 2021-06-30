@@ -1,6 +1,6 @@
 {
   "name": "atoms-react",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
